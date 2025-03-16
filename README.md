@@ -49,17 +49,22 @@ HUBSPOT_AUTH_API_URL=https://app.hubspot.com/oauth/authorize
 
 Para executar o projeto em uma IDE como IntelliJ IDEA, siga os passos abaixo:
 
-1. **Importar o projeto:**
+1. **Faça o pull do projeto:**
+   - Crie uma pasta no computador e abra um terminal dentro dessa pasta.
+   - Execute o comando ```git init```
+   - Execute o comando ```git pull https://github.com/LeonardoBorges14/hubspot-integration.git```
+
+2. **Importar o projeto:**
    - Abra o IntelliJ IDEA.
    - Clique em **Open** e selecione a pasta do projeto.
    - Aguarde o IntelliJ carregar as dependências do Maven automaticamente.
 
-2. **Configurar as variáveis de ambiente:**
+3. **Configurar as variáveis de ambiente:**
    - No IntelliJ, vá até **Run → Edit Configurations**.
    - Crie uma nova configuração de execução do tipo **Spring Boot Application**.
    - No campo **Environment Variables**, adicione as variáveis de ambiente necessárias, conforme listado na seção anterior.
 
-3. **Executar a aplicação:**
+4. **Executar a aplicação:**
    - Certifique-se de que a classe principal do Spring Boot está configurada corretamente.
    - Clique no botão de **Run** (ou pressione `Shift + F10`).
    - Aguarde até que o servidor seja iniciado e os logs indiquem que a aplicação está rodando.
