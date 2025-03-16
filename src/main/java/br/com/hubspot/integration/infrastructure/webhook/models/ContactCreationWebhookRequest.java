@@ -6,12 +6,12 @@ import java.util.Map;
 
 public record ContactCreationWebhookRequest(
         @JsonProperty("appId") long appId,
-        @JsonProperty("eventId") int eventId,
+        @JsonProperty("eventId") long eventId,
         @JsonProperty("subscriptionId") long subscriptionId,
         @JsonProperty("portalId") long portalId,
         @JsonProperty("occurredAt") long occurredAt,
         @JsonProperty("subscriptionType") String subscriptionType,
-        @JsonProperty("attemptNumber") int attemptNumber,
+        @JsonProperty("attemptNumber") long attemptNumber,
         @JsonProperty("objectId") long objectId,
         @JsonProperty("changeSource") String changeSource,
         @JsonProperty("changeFlag") String changeFlag
