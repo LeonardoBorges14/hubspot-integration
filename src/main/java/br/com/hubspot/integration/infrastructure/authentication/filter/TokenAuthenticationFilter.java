@@ -14,14 +14,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
 public class TokenAuthenticationFilter extends OncePerRequestFilter {
     public static final String TOKEN_HEADER = "Authorization";
 
-    // TODO WEBHOOK BATENDO, MAS DA ERRO PROVAVELMENTE NO TOKEN :
-
-//    2025-03-16T03:20:34.740Z  WARN 1 --- [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver :
-//    Resolved [org.springframework.http.converter.HttpMessageNotReadableException:
-//    JSON parse error: Cannot deserialize value of
-//    type `br.com.hubspot.integration.infrastructure.webhook.models.ContactCreationWebhookRequest`
-//    from Array value (token `JsonToken.START_ARRAY`)]
-
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) {
         try {
             String authorizationHeader = request.getHeader(TOKEN_HEADER);
