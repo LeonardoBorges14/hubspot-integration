@@ -11,7 +11,7 @@ O projeto foi hospedado e pode ser acessado pelo seguinte URL:
 
 [HubSpot Integration - Swagger UI](https://hubspot-integration-leonardo.onrender.com/swagger-ui/index.html#/)
 
-Este projeto está hospedado em uma plataforma gratuita, portanto, pode demorar cerca de 1 ou 2 minutos para carregar na primeira vez que for acessado. Isso é normal devido às restrições do serviço gratuito.
+**Obs:** Este projeto está hospedado em uma plataforma gratuita, portanto, pode demorar cerca de 1 ou 2 minutos para carregar na primeira vez que for acessado. Isso é normal devido às restrições do serviço gratuito.
 
 Além disso, o projeto pode ser executado localmente. No entanto, o disparo do webhook pode apresentar erros, pois o HubSpot aceita apenas URLs com HTTPS. Por isso, foi necessário hospedar o projeto em um servidor. Para rodar localmente é necessário seguir os passos a seguir:
 
@@ -28,7 +28,8 @@ Antes de iniciar, certifique-se de ter instalado:
 ### Configuração das Variáveis de Ambiente
 
 O projeto requer algumas variáveis de ambiente para funcionar corretamente. Defina-as antes de iniciar a aplicação:
-Obs: Os campos referentes ao banco de dados podem ser preenchidos com algum banco próprio local, porém já hospedei um banco em um servidor para facilitar o processo
+
+**Obs:** Os campos referentes ao banco de dados podem ser preenchidos com algum banco próprio local, porém já hospedei um banco postgresql em um servidor externo para facilitar o processo
 
 ```sh
 DATABASE_URL=jdbc:postgresql://dpg-cvbbtutsvqrc73c5ko70-a.oregon-postgres.render.com:5432/hubspot_integration
@@ -72,7 +73,7 @@ A API possui os seguintes endpoints, que devem ser executados na ordem correta:
 
 **Endpoint:** `GET /authentication/authorization-url`
 
-**Descrição:** Esse endpoint retorna uma URL do HubSpot. O usuário deve copiá-la e colá-la no navegador para autorizar a aplicação. Após a autorização, o HubSpot retorna um código de autorização.
+**Descrição:** Esse endpoint retorna uma URL do HubSpot. É necessário copiá-la e colá-la no navegador para autorizar a aplicação. Após a autorização, o HubSpot redireciona para uma URL de exemplo com um parâmetro preenchido que é o código de autorização, que deve ser copiado.
 
 ---
 
@@ -112,3 +113,35 @@ A API possui os seguintes endpoints, que devem ser executados na ordem correta:
 
 ---
 
+## Bibliotecas usadas
+
+#### 1. Spring Boot Starter Data JPA
+**Motivação:** Foi usada para gerenciamento de persistência de dados da entidade de Webhook que precisou ser salva no banco, assim com o uso do Starter Data JPA facilitou muito esse processo.
+
+#### 2. Spring Cloud OpenFeign
+**Motivação:** Foi utilizada para fazer a integração com as APIs do HubSpot de forma simples, e foi necessária tanto no processo de geração de token, quanto da criação de contatos.
+
+#### 3. SpringDoc OpenAPI (Swagger)
+**Motivação:** A motivação para o uso foi para testar os endpoints de forma mais fácil e também já criar a documentação automática da API.
+
+#### 4. Lombok
+**Motivação:** Utilizei para facilitar no processo de desenvolvimento reduzindo códgio, já que com as anotações do lombok, consigo automatizar diversos pontos, como a criação dos métodos getters e setters ou de construtores.
+
+---
+
+## Possíveis Melhorias Futuras
+
+#### 1. Tratamento de Erros
+- Implementar um ExceptionHandler centralizado
+- Padronizar respostas de erro usando DTOs específicos
+- Criar códigos de erro customizados
+- Implementar logs estruturados para erros
+
+#### 2. Testes
+- Expandir cobertura de testes 
+- Adicionar testes de performance
+- Implementar testes funcionais
+
+#### 3. Funcionalidades
+- Adicionar um front end para na geração de token por exemplo já fazer automático o redirecionamento para a autorização no hubspot e gerar o token de acesso.
+- Implementar operações diferentes com contato (Exclusão, Busca por Id, Listagem paginada, Edição)
