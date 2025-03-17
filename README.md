@@ -79,7 +79,7 @@ A API possui os seguintes endpoints, que devem ser executados na ordem correta:
 
 **Endpoint:** `GET /authentication/authorization-url`
 
-**Descrição:** Esse endpoint retorna uma URL do HubSpot. É necessário copiá-la e colá-la no navegador para autorizar a aplicação. Após a autorização, o HubSpot redireciona para uma URL de exemplo com um parâmetro preenchido que é o código de autorização, que deve ser copiado.
+**Descrição:** Esse endpoint retorna uma URL do HubSpot. É necessário copir e colar essa URL no navegador para autorizar a aplicação. Após a autorização, o HubSpot redireciona para uma URL de exemplo com um parâmetro preenchido que é o código de autorização, que deve ser copiado. Você será redirecionado para uma URL parecida com http://localhost:8080/?code=na1-e792-a182-4f7f-85ec-45cd0c687208&state=null, onde nesse caso o código que deve ser copiado é na1-e792-a182-4f7f-85ec-45cd0c687208
 
 ---
 
@@ -87,7 +87,7 @@ A API possui os seguintes endpoints, que devem ser executados na ordem correta:
 
 **Endpoint:** `POST /authentication/callback`
 
-**Descrição:** Esse endpoint recebe o código de autorização gerado pelo HubSpot e retorna um *access token* e um *refresh token*. O *access token* é necessário para autenticar os próximos endpoints.
+**Descrição:** Esse endpoint recebe o código de autorização gerado pelo HubSpot e obtido por meio da URL do endpoint aterior, que retorna um *access token* e um *refresh token*. O *access token* é necessário para autenticar os próximos endpoints.
 
 ---
 
