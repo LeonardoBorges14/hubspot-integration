@@ -11,7 +11,7 @@ O projeto foi hospedado e pode ser acessado pelo seguinte URL:
 
 [HubSpot Integration - Swagger UI](https://hubspot-integration-leonardo.onrender.com/swagger-ui/index.html#/)
 
-**Obs:** Este projeto está hospedado em uma plataforma gratuita, portanto, pode demorar cerca de 1 ou 2 minutos para carregar na primeira vez que for acessado. Isso é normal devido às restrições do serviço gratuito.
+**Obs:** Este projeto está hospedado em uma plataforma gratuita, portanto, pode demorar cerca de 1 a 3 minutos para carregar na primeira vez que for acessado. Isso é normal devido às restrições do serviço gratuito.
 
 Além disso, o projeto pode ser executado localmente. No entanto, o disparo do webhook pode apresentar erros, pois o HubSpot aceita apenas URLs com HTTPS. Por isso, foi necessário hospedar o projeto em um servidor. Caso queira rodar o projeto localmente é necessário seguir os passos a seguir:
 
