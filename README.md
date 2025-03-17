@@ -68,6 +68,7 @@ Para executar o projeto em uma IDE como IntelliJ IDEA, siga os passos abaixo:
    - Certifique-se de que a classe principal do Spring Boot está configurada corretamente.
    - Clique no botão de **Run** (ou pressione `Shift + F10`).
    - Aguarde até que o servidor seja iniciado e os logs indiquem que a aplicação está rodando.
+   - Acesse o swagger com a documentação da api por meio da URL http://localhost:8080/swagger-ui/index.html#/
 ---
 
 ## Uso da API
