@@ -61,7 +61,7 @@ Para executar o projeto em uma IDE como IntelliJ IDEA, siga os passos abaixo:
 
 3. **Configurar as variáveis de ambiente:**
    - No IntelliJ, vá até **Run → Edit Configurations**.
-   - Crie uma nova configuração de execução do tipo **Spring Boot Application**.
+   - Crie uma nova configuração de execução do tipo **Application**.
    - No campo **Environment Variables**, adicione as variáveis de ambiente necessárias, conforme listado na seção anterior.
 
 4. **Executar a aplicação:**
